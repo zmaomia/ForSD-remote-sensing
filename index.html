@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ForSD: Remote sensing for boreal forest structural diversity characterization — research overview and results.">
+  <title>ForSD | Boreal Forest Structural Diversity</title>
+  <style>
+    :root { --ink:#182d2a; --muted:#61716d; --forest:#236858; --line:#dfe8e3; --bg:#f6f9f7; --white:#fff; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; background:var(--white); }
+    a { color:var(--forest); }
+    .wrap { max-width:1080px; padding:0 24px; margin:0 auto; }
+    header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); position:sticky; top:0; z-index:5; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:68px; }
+    .brand { color:var(--ink); text-decoration:none; font-weight:800; letter-spacing:-.02em; font-size:1.1rem; }
+    nav { display:flex; gap:20px; flex-wrap:wrap; }
+    nav a { color:var(--muted); text-decoration:none; font-size:.91rem; }
+    nav a:hover { color:var(--forest); }
+    .hero { padding:90px 0 75px; background:linear-gradient(135deg,#f0f6f1 0%,#fafcfb 65%,#eef4f1 100%); }
+    .eyebrow { color:var(--forest); text-transform:uppercase; letter-spacing:.16em; font-weight:800; font-size:.76rem; }
+    h1 { font-size:clamp(2rem,5vw,3.7rem); line-height:1.14; letter-spacing:-.045em; max-width:800px; margin:16px 0 20px; }
+    .lead { color:var(--muted); max-width:720px; font-size:1.13rem; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .btn { display:inline-block; padding:10px 18px; border-radius:7px; text-decoration:none; background:var(--forest); color:white; font-weight:650; }
+    .btn.secondary { background:white; border:1px solid #bfcfc6; color:var(--forest); }
+    section { padding:70px 0; scroll-margin-top:75px; }
+    section.alt { background:var(--bg); }
+    h2 { font-size:1.75rem; letter-spacing:-.025em; margin:0 0 20px; }
+    h3 { margin:0 0 8px; font-size:1.1rem; }
+    p { margin:0 0 16px; }
+    .section-intro { color:var(--muted); max-width:760px; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:28px; }
+    .card { border:1px solid var(--line); background:white; border-radius:12px; padding:23px; }
+    .card p { color:var(--muted); margin:0; }
+    .figure { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#edf3ee; margin:24px 0 0; }
+    .placeholder { min-height:245px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px; text-align:center; padding:20px; color:#71867b; background:repeating-linear-gradient(45deg,#f0f5f1,#f0f5f1 12px,#e8f0ea 12px,#e8f0ea 24px); }
+    .placeholder strong { color:#436255; }
+    figcaption { padding:12px 16px; background:white; color:var(--muted); font-size:.9rem; }
+    .results { max-width:920px; margin-top:24px; }
+    .results img { display:block; width:100%; height:auto; }
+    .results .figure { margin:0; }
+    .results .placeholder { min-height:210px; }
+    .paper { border-left:4px solid var(--forest); background:var(--bg); padding:24px; border-radius:0 10px 10px 0; }
+    .paper p { color:var(--muted); }
+    footer { border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:.88rem; }
+    @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; padding:15px 0; gap:12px; } nav { gap:13px; } .hero { padding:62px 0; } section { padding:48px 0; } .cards,.results { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">ForSD · Remote Sensing</a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#publication">Publication</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero" id="home">
+      <div class="wrap">
+        <div class="eyebrow">Research project · Remote sensing</div>
+        <h1>Characterizing Structural Diversity in Boreal Forests</h1>
+        <p class="lead">Supplementary materials, research visualizations, and experimental results for remote sensing-based characterization of boreal forest structural diversity.</p>
+        <div class="actions">
+          <a class="btn" href="#results">Explore results</a>
+          <a class="btn secondary" href="https://github.com/zmaomia/ForSD-remote-sensing">GitHub repository ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <section id="overview">
+      <div class="wrap">
+        <h2>Overview</h2>
+        <p class="section-intro">This project explores how remote sensing observations can be used to characterize structural diversity and spatial variability in boreal forests. This page presents selected methodological illustrations and research results. Replace this paragraph with the paper-specific research question and contributions.</p>
+      </div>
+    </section>
+
+    <section class="alt" id="highlights">
+      <div class="wrap">
+        <h2>Research Highlights</h2>
+        <div class="cards">
+          <article class="card"><h3>Structural characterization</h3><p>Quantitative description of forest structural attributes using remote sensing data.</p></article>
+          <article class="card"><h3>Spatial variability</h3><p>Visual interpretation of forest structural patterns and heterogeneity.</p></article>
+          <article class="card"><h3>Research visualization</h3><p>Accessible illustrations of methods, datasets, and experimental outcomes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <h2>Methodology</h2>
+        <p class="section-intro">Describe the input data, processing steps, and analysis workflow here.</p>
+        <figure class="figure">
+          <div class="placeholder" role="img" aria-label="Placeholder for workflow diagram"><strong>Method workflow image</strong><span>Replace with your methodology figure</span></div>
+          <figcaption>Figure 1. Overview of the proposed methodological workflow (placeholder).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="alt" id="results">
+      <div class="wrap">
+        <h2>Results</h2>
+        <p class="section-intro">A selected visualization of boreal forest structural diversity characterization.</p>
+        <div class="results">
+          <figure class="figure">
+            <img src="assets/images/results.png" alt="Visualization of boreal forest structural diversity research results" loading="lazy">
+            <figcaption>Figure 2. Selected results of boreal forest structural diversity characterization.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="publication">
+      <div class="wrap">
+        <h2>Publication</h2>
+        <div class="paper">
+          <h3>[Full paper title]</h3>
+          <p>[Author names] · [Journal / Conference], [Year]</p>
+          <p>Add a DOI or publication URL when available.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">ForSD · Remote Sensing &nbsp;|&nbsp; <a href="https://github.com/zmaomia/ForSD-remote-sensing">Source repository</a></div></footer>
+</body>
+</html>
