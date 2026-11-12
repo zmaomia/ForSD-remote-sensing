@@ -52,7 +52,52 @@
     .paper { border-left:4px solid var(--forest); background:var(--bg); padding:24px; border-radius:0 10px 10px 0; }
     .paper p { color:var(--muted); }
     footer { border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:.88rem; }
-    @media(max-width:700px) { .nav { align-items:flex-start; flex-direction:column; padding:15px 0; gap:12px; } nav { gap:13px; } .hero { padding:62px 0; } section { padding:48px 0; } .cards,.results { grid-template-columns:1fr; } }
+    /* Prevent layout overflow and keep figures at their natural aspect ratio. */
+    img { max-width:100%; }
+    .wrap, .card, .paper, .figure { min-width:0; }
+    .research-image { max-width:100%; width:100%; height:auto; object-fit:contain; }
+    .paper, .card { overflow-wrap:break-word; }
+    @media (max-width:900px) and (min-width:701px) {
+      .wrap { padding-inline:22px; }
+      .nav { gap:14px; }
+      nav { gap:12px; }
+      nav a { font-size:.84rem; }
+      .cards { gap:12px; }
+      .card { padding:18px; }
+    }
+    @media (max-width:700px) {
+      html { scroll-padding-top:12px; }
+      body { font-size:15px; line-height:1.65; overflow-x:hidden; }
+      .wrap { width:100%; padding-inline:18px; }
+      header { position:relative; }
+      .nav { flex-direction:column; align-items:stretch; gap:12px; padding-block:14px; min-height:0; }
+      .brand { font-size:1rem; }
+      nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; width:100%; }
+      nav a { display:flex; justify-content:center; align-items:center; min-height:38px; padding:7px 4px; text-align:center; line-height:1.2; font-size:.76rem; font-weight:600; background:var(--bg); border:1px solid var(--line); border-radius:8px; }
+      .hero { padding:43px 0 45px; }
+      h1 { font-size:clamp(1.85rem,7.4vw,2.55rem); line-height:1.18; letter-spacing:-.035em; margin:0 0 15px; overflow-wrap:normal; }
+      .lead { font-size:1rem; line-height:1.6; margin:0; }
+      section { padding:39px 0; scroll-margin-top:12px; }
+      h2 { font-size:1.45rem; margin-bottom:16px; }
+      h3 { font-size:1.05rem; }
+      p { margin-bottom:14px; }
+      .cards { grid-template-columns:1fr; gap:12px; margin-top:20px; }
+      .card { padding:17px 18px; border-radius:10px; }
+      .figure { margin-top:18px; border-radius:9px; }
+      .results { margin-top:18px; max-width:100%; }
+      .research-image { display:block; height:auto; width:100%; max-height:none; }
+      figcaption { font-size:.82rem; line-height:1.55; padding:12px 13px; }
+      .figure-tools { padding:12px 13px; font-size:.84rem; }
+      .future-list { padding-left:20px; }
+      .future-list li { margin-bottom:12px; }
+      .paper { padding:18px 17px; }
+      footer { padding:22px 0; font-size:.8rem; }
+    }
+    @media (max-width:370px) {
+      .wrap { padding-inline:14px; }
+      nav a { font-size:.7rem; }
+      h1 { font-size:1.8rem; }
+    }
   </style>
 </head>
 <body>
