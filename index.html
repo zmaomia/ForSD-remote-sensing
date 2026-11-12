@@ -15,6 +15,10 @@
     header { border-bottom:1px solid var(--line); background:rgba(255,255,255,.97); position:sticky; top:0; z-index:5; }
     .nav { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:68px; }
     .brand { color:var(--ink); text-decoration:none; font-weight:800; letter-spacing:-.02em; font-size:1.125rem; }
+    .crumbs { display:flex; align-items:center; gap:10px; flex-wrap:wrap; min-width:0; }
+    .home-link { color:var(--muted); text-decoration:none; font-weight:600; font-size:1rem; white-space:nowrap; }
+    .home-link:hover { color:var(--forest); }
+    .crumb-sep { color:#b4c4bc; }
     nav { display:flex; gap:20px; flex-wrap:wrap; }
     nav a { color:var(--muted); text-decoration:none; font-size:1rem; }
     nav a:hover { color:var(--forest); }
@@ -103,7 +107,11 @@
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#home">ForSD · Remote Sensing</a>
+      <div class="crumbs">
+        <a class="home-link" href="https://zmaomia.github.io/" title="Back to main page">← Zhu Mao</a>
+        <span class="crumb-sep" aria-hidden="true">/</span>
+        <a class="brand" href="#home">ForSD · Remote Sensing</a>
+      </div>
       <nav aria-label="Main navigation">
         <a href="#overview">Overview</a>
         <a href="#highlights">Highlights</a>
@@ -198,6 +206,6 @@
     </section>
   </main>
 
-  <footer><div class="wrap">ForSD · Remote Sensing &nbsp;|&nbsp; <a href="https://github.com/zmaomia/ForSD-remote-sensing">Source repository</a></div></footer>
+  <footer><div class="wrap">ForSD · Remote Sensing &nbsp;|&nbsp; <a href="https://zmaomia.github.io/">Main page</a> &nbsp;|&nbsp; <a href="https://github.com/zmaomia/ForSD-remote-sensing">Source repository</a></div></footer>
 </body>
 </html>
