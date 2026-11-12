@@ -42,6 +42,13 @@
     .results img { display:block; width:100%; height:auto; }
     .results .figure { margin:0; }
     .results .placeholder { min-height:210px; }
+    .image-figure { background:#fff; }
+    .research-image { display:block; width:100%; height:auto; object-fit:contain; }
+    .figure-tools { padding:12px 16px; background:white; border-top:1px solid var(--line); font-size:.9rem; }
+    .figure-tools a { font-weight:650; }
+    .hint { font-size:.88rem; color:var(--muted); margin-top:12px; }
+    .future-list { margin:16px 0 0; padding-left:22px; max-width:850px; }
+    .future-list li { margin:0 0 12px; }
     .paper { border-left:4px solid var(--forest); background:var(--bg); padding:24px; border-radius:0 10px 10px 0; }
     .paper p { color:var(--muted); }
     footer { border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:.88rem; }
@@ -57,6 +64,7 @@
         <a href="#highlights">Highlights</a>
         <a href="#method">Method</a>
         <a href="#results">Results</a>
+        <a href="#future-work">Future Work</a>
         <a href="#publication">Publication</a>
       </nav>
     </div>
@@ -66,8 +74,8 @@
     <div class="hero" id="home">
       <div class="wrap">
         <div class="eyebrow">Research project · Remote sensing</div>
-        <h1>Characterizing Structural Diversity in Boreal Forests</h1>
-        <p class="lead">Supplementary materials, research visualizations, and experimental results for remote sensing-based characterization of boreal forest structural diversity.</p>
+        <h1>Mapping Tree-Level Structural Diversity in Boreal Forests</h1>
+        <p class="lead">Spatially informed structural indices and a comparison of 5-cm drone and 50-cm aerial remote sensing data.</p>
         <div class="actions">
           <a class="btn" href="#results">Explore results</a>
           <a class="btn secondary" href="https://github.com/zmaomia/ForSD-remote-sensing">GitHub repository ↗</a>
@@ -78,7 +86,8 @@
     <section id="overview">
       <div class="wrap">
         <h2>Overview</h2>
-        <p class="section-intro">This project explores how remote sensing observations can be used to characterize structural diversity and spatial variability in boreal forests. This page presents selected methodological illustrations and research results. Replace this paragraph with the paper-specific research question and contributions.</p>
+        <p>This study presents a spatially informed framework for mapping tree-level structural diversity in boreal forests using multi-source remote sensing data. Individual tree attributes are analyzed within a radius-defined moving window to characterize local forest structure through three indices: spatial tree density (SDen), the spatial Gini index of tree height (SGINI), and the spatial mingling index of tree species (SMLI).</p>
+        <p>We evaluate the framework using 5-cm drone and 50-cm aerial datasets to investigate how spatial resolution affects forest structural diversity mapping. Drone data enable more accurate tree detection and structural mapping, while aerial data can capture broader spatial patterns and offer potential for large-area forest assessment and management.</p>
       </div>
     </section>
 
@@ -86,9 +95,9 @@
       <div class="wrap">
         <h2>Research Highlights</h2>
         <div class="cards">
-          <article class="card"><h3>Structural characterization</h3><p>Quantitative description of forest structural attributes using remote sensing data.</p></article>
-          <article class="card"><h3>Spatial variability</h3><p>Visual interpretation of forest structural patterns and heterogeneity.</p></article>
-          <article class="card"><h3>Research visualization</h3><p>Accessible illustrations of methods, datasets, and experimental outcomes.</p></article>
+          <article class="card"><h3>Spatially informed indices</h3><p>A tree-centered moving-window framework captures local horizontal and vertical forest structure using SDen, SGINI, and SMLI.</p></article>
+          <article class="card"><h3>Drone vs. aerial data</h3><p>A comparison of 5-cm drone and 50-cm aerial datasets evaluates mapping accuracy and the trade-off between fine spatial detail and broader coverage.</p></article>
+          <article class="card"><h3>Management-relevant maps</h3><p>Spatial interpolation and threshold-based clustering identify structural patterns and salient regions relevant to forest thinning and other operations.</p></article>
         </div>
       </div>
     </section>
@@ -96,10 +105,11 @@
     <section id="method">
       <div class="wrap">
         <h2>Methodology</h2>
-        <p class="section-intro">Describe the input data, processing steps, and analysis workflow here.</p>
-        <figure class="figure">
-          <div class="placeholder" role="img" aria-label="Placeholder for workflow diagram"><strong>Method workflow image</strong><span>Replace with your methodology figure</span></div>
-          <figcaption>Figure 1. Overview of the proposed methodological workflow (placeholder).</figcaption>
+        <p class="section-intro">The workflow begins with individual tree detection and tree-height estimation from multispectral orthophotos and LiDAR-derived canopy height models. A 10-m-radius moving window is then used to calculate SDen, SGINI, and SMLI for each tree. The resulting indices are mapped through spatial interpolation, compared across data sources, and used to identify salient regions through threshold-based clustering.</p>
+        <figure class="figure image-figure">
+          <img class="research-image" src="assets/figures/Overallworkflow.png" alt="Overall research workflow showing tree detection, spatial structural indices, aerial and drone comparison, and clustering" loading="lazy">
+          <figcaption>Figure 1. Overall workflow: individual tree detection, spatially informed index modeling, comparison of aerial and drone datasets, and threshold-based clustering.</figcaption>
+          <div class="figure-tools"><a href="assets/figures/Overallworkflow.pdf" target="_blank" rel="noopener noreferrer">Open methodology figure (PDF) ↗</a></div>
         </figure>
       </div>
     </section>
@@ -107,13 +117,26 @@
     <section class="alt" id="results">
       <div class="wrap">
         <h2>Results</h2>
-        <p class="section-intro">A selected visualization of boreal forest structural diversity characterization.</p>
+        <p class="section-intro">A comparison of tree-level forest structural diversity maps derived from 5-cm drone and 50-cm aerial data. The figure presents individual tree detection, SDen, SGINI, SMLI, and salient regions identified through threshold-based clustering. Drone-based mapping offers higher accuracy, while the aerial data retain broadly comparable spatial patterns.</p>
         <div class="results">
-          <figure class="figure">
-            <img src="assets/images/results.png" alt="Visualization of boreal forest structural diversity research results" loading="lazy">
-            <figcaption>Figure 2. Selected results of boreal forest structural diversity characterization.</figcaption>
+          <figure class="figure image-figure">
+            <img class="research-image" src="assets/figures/Compare_mapping2.png" alt="Comparison of forest structure mapping and clustering using drone and aerial data" loading="lazy">
+            <figcaption>Figure 2. Comparison of 5-cm drone and 50-cm aerial forest structural index maps and clustering boundaries, alongside ground truth. Mapping results are shown at 0.5-m spatial resolution.</figcaption>
+            <div class="figure-tools"><a href="assets/figures/Compare_mapping2.pdf" target="_blank" rel="noopener noreferrer">Open results figure (PDF) ↗</a></div>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section id="future-work">
+      <div class="wrap">
+        <h2>Future Work</h2>
+        <p>Future research will focus on improving individual tree detection in structurally complex boreal forests, particularly the detection of <strong>understory trees</strong> that are occluded by dominant tree canopies and are often missed in overhead imagery.</p>
+        <ul class="future-list">
+          <li><strong>Reducing understory omission:</strong> Explore complementary three-dimensional observations and improved detection approaches to identify smaller, suppressed, and partially occluded trees.</li>
+          <li><strong>Multi-source integration:</strong> Investigate the integration of terrestrial laser scanning with drone and aerial data to improve tree inventories and structural index estimates.</li>
+          <li><strong>Robustness across forest conditions:</strong> Evaluate how more complete tree detection affects SDen, SGINI, and SMLI maps in dense and heterogeneous stands.</li>
+        </ul>
       </div>
     </section>
 
@@ -121,9 +144,9 @@
       <div class="wrap">
         <h2>Publication</h2>
         <div class="paper">
-          <h3>[Full paper title]</h3>
-          <p>[Author names] · [Journal / Conference], [Year]</p>
-          <p>Add a DOI or publication URL when available.</p>
+          <h3>Mapping tree-level structural diversity in boreal forests using spatially informed indices: a comparison of 5-cm drone and 50-cm aerial data</h3>
+          <p>Zhu Mao, Omid Abdi, Ville Laamanen, Veli-Pekka Kivinen, and Jori Uusitalo</p>
+          <p>Manuscript. Publication details and DOI will be added when available.</p>
         </div>
       </div>
     </section>
