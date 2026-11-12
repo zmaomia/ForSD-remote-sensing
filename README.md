@@ -3,13 +3,13 @@
 This repository provides supplementary materials, visualizations, and experimental results for our research on boreal forest structural diversity charaterrization. 
 
 
-## Overview
+%## Overview
 
 
 
-## Highlights
+%## Highlights
 
 
 
-## Results
+%## Results
 
