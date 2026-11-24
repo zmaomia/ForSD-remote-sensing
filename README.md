@@ -1,6 +1,7 @@
 # ForSD-remote-sensing
 
 This repository provides supplementary materials, visualizations, and experimental results for our research on boreal forest structural diversity charaterrization. 
+Project page with results and figures: https://zmaomia.github.io/ForSD-remote-sensing/
 
 ## Calculating the structural diversity indices
 
@@ -37,3 +38,5 @@ If the window contains only the focal tree, SGINI and SMLI are set to 0.
 ## Data availability
 
 The data and trained models are available from the corresponding author upon reasonable request.
+
+
